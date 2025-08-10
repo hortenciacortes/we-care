@@ -1,0 +1,15 @@
+.hc-button-primary {
+  background-color    : var(--hc-primary-500);
+
+  &:hover {
+    background-color  : var(--hc-primary-400);
+  }
+}
+
+.hc-button-secondary {
+  background-color    : var(--hc-secondary-500);
+
+  &:hover {
+    background-color  : var(--hc-secondary-400);
+  }
+}

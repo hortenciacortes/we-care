@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "@styles/globals.scss";
 
 const montserrat = Montserrat({
-  variable: "--font-family",
+  variable: "--hc-font-family",
   subsets: ["latin"],
 });
 
