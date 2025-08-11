@@ -16,4 +16,6 @@
   --hc-text-primary   : var(--hc-primary-500);
   --hc-text-strong    : var(--hc-foreground-500);
   --hc-text-light     : var(--hc-foreground-10);
+
+  --hc-background-linear: linear-gradient(to bottom, #DCCCB1, var(--hc-foreground-10));
 }

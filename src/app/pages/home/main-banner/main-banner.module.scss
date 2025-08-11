@@ -16,18 +16,16 @@
     width           : 55%;
   }
 
-  h1, h3, p {
+  p {
     color           : var(--hc-text-light);
+  }
 
+  h1 {
     span {
       font-size     : 20px;
       font-weight   : 500;
       display       : block;
       color         : var(--hc-text-light);
     }
-  }
-
-  h1 {
-    color           : var(--hc-secondary-500);
   }
 }
