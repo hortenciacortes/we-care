@@ -1,0 +1,29 @@
+@use "@styles/mixins" as *;
+
+.about {
+  @include flex(center, center);
+  flex-direction    : row-reverse;
+  gap               : 40px;
+  grid-column       : 2;
+
+  .text {
+    @include flex(center, start, true);
+    width           : 50%;
+
+    h2 {
+      color         : var(--hc-primary-400);
+    }
+  }
+
+}
+.swiper {
+  position          : relative;
+  width             : 50%;
+  height            : auto;
+
+  .swiperImage {
+    max-height      : 80vh;
+    border-radius   : 8px;
+    box-shadow      : 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
