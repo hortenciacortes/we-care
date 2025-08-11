@@ -1,0 +1,85 @@
+@use "@styles/mixins.scss" as *;
+
+.container {
+  background-color    : var(--hc-primary-300);
+  width               : 100%;
+  min-height          : 65px;
+  z-index             : 4;
+  position            : fixed;
+  top                 : 0;
+}
+
+.menu {
+  @include flex(space-between, center);
+  grid-column         : 2;
+
+  .iconMenu {
+    @include flex(space-between, end, true, 8px);
+    display           : none;
+    padding           : 8px;
+    background        : transparent;
+    cursor            : pointer;
+
+    span {
+      width           : 26px;
+      height          : 4px;
+      background      : var(--hc-primary-500);
+      border-radius   : 2px;
+    }
+
+    span:nth-child(2) {
+      width           : 34px;
+    }
+
+    span:nth-child(3) {
+      width           : 42px;
+    }
+  }
+
+  img {
+    width             : 50px;
+    height            : auto;
+  }
+
+  input {
+    display           : none;
+  }
+
+  ul {
+    @include flex(space-between, center);
+    list-style        : none;
+    padding           : 0;
+    margin            : 0;
+
+    li {
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    .iconMenu {
+      display         : flex;
+    }
+
+    ul {
+      position        : absolute;
+      top             : 60px;
+      left            : 0px;
+      display         : none;
+      width           : 100%;
+      text-align      : center;
+      background      : var(--hc-primary-300);
+      z-index         : 3;
+      gap             : 0px;
+      grid-template   : auto / 1fr;
+
+      a {
+        display       : block;
+        padding       : 12px;
+        margin        : 0px;
+        border-bottom : 1px solid var(--hc-primary-500);
+      }
+    }
+  }
+}
