@@ -1,31 +1,73 @@
 @use "@styles/mixins.scss" as *;
 
 .container {
-  background        : var(--hc-primary-300) url("/renata-cortes.png") no-repeat right fixed;
-  background-size   : contain;
-  min-height        : 100vh;
+  background              : var(--hc-primary-300) url("/renata-cortes.png") no-repeat right fixed;
+  background-size         : contain;
+  min-height              : 100vh;
 }
 
 .mainBanner {
-  grid-column       : 2;
-  display           : flex;
-  gap               : 40px;
+  grid-column             : 2;
+  display                 : flex;
+  gap                     : 40px;
 
   .text {
     @include flex(center, start, true, 40px);
-    width           : 55%;
+    width                 : 55%;
   }
 
   p {
-    color           : var(--hc-text-light);
+    color                 : var(--hc-text-light);
   }
 
   h1 {
     span {
-      font-size     : 20px;
-      font-weight   : 500;
-      display       : block;
-      color         : var(--hc-text-light);
+      font-size           : 20px;
+      font-weight         : 500;
+      display             : block;
+      color               : var(--hc-text-light);
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .mainBanner {
+    .text {
+      width               : 40%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-size       : 300px;
+    background-position   : center bottom;
+  }
+
+  .mainBanner {
+    .text {
+      align-items         : center;
+      justify-content     : start;
+      width               : 100%;
+      gap                 : 20px;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    background-size       : 250px;
+  }
+}
+
+@media (max-width: 370px) {
+  .container {
+    background-image      : none;
+  }
+
+  .mainBanner {
+    .text {
+      justify-content     : space-evenly;
     }
   }
 }
