@@ -1,0 +1,50 @@
+@use "@styles/mixins.scss" as *;
+
+.container {
+  background-color        : var(--hc-foreground-50);
+}
+
+.services {
+  @include flex(center, center, true, 40px);
+  grid-column             : 2;
+
+  h2 {
+    color                 : var(--hc-primary-400);
+  }
+
+  .text {
+    @include flex(center, center);
+    width                 : 100%;
+    flex-wrap             : wrap;
+
+    .card {
+      @include flex(start, center, true);
+      padding             : 20px;
+      border-radius       : 8px;
+      box-shadow          : 0 0 10px 0 rgba(0,0,0,.1);
+      width               : 280px;
+      min-height          : 340px;
+      text-align          : center;
+      background-color    : var(--hc-foreground-10);
+
+      img {
+        width             : 120px;
+        height            : auto;
+      }
+
+      h3 {
+        @include typography(600, 22px, var(--hc-text-strong), 1.4);
+        margin-bottom     : 10px;
+      }
+
+      p {
+        @include typography(400, 16px, var(--hc-text-light), 1.5);
+        color             : var(--hc-text-secondary);
+      }
+    }
+
+    h3 {
+      @include typography(600, 24px, var(--hc-text-strong), 1.4);
+    }
+  }
+}
