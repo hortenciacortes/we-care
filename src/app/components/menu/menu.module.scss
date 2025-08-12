@@ -41,18 +41,11 @@
     height            : auto;
   }
 
-  input {
-    display           : none;
-  }
-
   ul {
     @include flex(space-between, center);
     list-style        : none;
     padding           : 0;
     margin            : 0;
-
-    li {
-    }
   }
 }
 
@@ -80,6 +73,10 @@
         margin        : 0px;
         border-bottom : 1px solid var(--hc-primary-500);
       }
+    }
+
+    ul.menuOpen {
+      display         : grid;
     }
   }
 }
