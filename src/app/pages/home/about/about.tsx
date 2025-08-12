@@ -8,7 +8,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 export function About() {
   return (
-    <section className="grid-pattern">
+    <section id='about' className="grid-pattern">
       <div className={style.about}>
         <div className={style.text}>
           <h2>Sobre mim</h2>
