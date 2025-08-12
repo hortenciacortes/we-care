@@ -12,11 +12,11 @@ export function Contact() {
             <img src="/contact/phone-icon.svg" alt="Ícone de telefone" />
             (69) 99900-1982
           </a>
-          <a href="https://wa.me/556999001982?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta">
+          <a href="https://wa.me/556999001982?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank">
             <img src="/contact/whatsapp-icon.svg" alt="Ícone de WhatsApp" />
             Whatsapp
           </a>
-          <a href="https://instagram.com/hortenciacortes">
+          <a href="https://instagram.com/reh_cortes" target="_blank">
             <img src="/contact/instagram-icon.svg" alt="Ícone de Instagram" />
             Instagram
           </a>
