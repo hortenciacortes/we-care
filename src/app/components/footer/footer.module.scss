@@ -1,0 +1,16 @@
+@use "@styles/mixins" as *;
+
+.container {
+  padding             : 40px 0px;
+  background-color    : var(--hc-primary-300);
+}
+
+.footer {
+  @include flex(center, center, true);
+  grid-column         : 2;
+  
+  p {
+    color             : var(--hc-foreground-100);
+  }
+
+}
