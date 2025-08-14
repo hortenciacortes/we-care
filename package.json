@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && next-image-export-optimizer",
     "start": "next start",
     "server": "serve out",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "15.4.6",
+    "next-image-export-optimizer": "^1.19.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "sass": "^1.90.0",
