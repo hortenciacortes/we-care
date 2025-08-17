@@ -27,11 +27,6 @@
       text-align          : center;
       background-color    : var(--hc-foreground-10);
 
-      img {
-        width             : 120px;
-        height            : auto;
-      }
-
       h3 {
         @include typography(600, 22px, var(--hc-text-strong), 1.4);
         margin-bottom     : 10px;

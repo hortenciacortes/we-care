@@ -3,6 +3,13 @@ import style from "./main-banner.module.scss";
 export function MainBanner() {
   return (
     <section className={`${style.container} grid-pattern`}>
+        <img
+          src="/renata-cortes.webp"
+          alt=""
+          style={{ display: 'none', width: 0, height: 0, position: 'absolute' }}
+          loading="eager"
+          fetchPriority="high"
+        />
       <div className={style.mainBanner}>
         <div className={style.text}>
           <h1 className="linear-vertical">

@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Renata Côrtes",
+  title: "Dra. Renata Côrtes",
   description: "Dra. Renata Cortes – Medicina e Saúde. Atendimento humanizado, escuta atenta e cuidado integral para promover sua qualidade de vida",
 };
 

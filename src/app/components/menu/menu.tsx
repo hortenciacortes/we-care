@@ -3,6 +3,8 @@
 import Link from "next/link";
 import style from "./menu.module.scss";
 import { useState } from "react";
+import ExportedImage from "next-image-export-optimizer";
+import logo from "@assets/images/logo.png";
 
 export function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,9 +18,14 @@ export function Menu() {
         <Link
           href='/'
           aria-label='Início'
-          className={style.logo}
         >
-          <img src="/logo.png" alt="Renata Côrtes Logo" className={style.logo} />
+          <ExportedImage
+            src={logo}
+            alt="Renata Côrtes Logo"
+            width={50}
+            height={45}
+            priority
+          />
         </Link>
         
         <button
