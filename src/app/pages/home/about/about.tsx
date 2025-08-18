@@ -5,6 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import style from "./about.module.scss";
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import ExportedImage from 'next-image-export-optimizer';
+
+import slide1 from '@assets/images/about/renata-swiper1.jpg';
+import slide2 from '@assets/images/about/renata-swiper2.jpg';
+import slide3 from '@assets/images/about/renata-swiper3.jpg';
 
 export function About() {
   return (
@@ -34,7 +39,7 @@ export function About() {
         <div className={style.swiper}>
           <Swiper
             modules={[Navigation, Autoplay, Pagination]}
-            // loop
+            loop
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -42,25 +47,37 @@ export function About() {
             slidesPerView={1}
           >
             <SwiperSlide>
-              <img
-                src="/about/renata-swiper1.jpg"
-                alt="Foto da médica"
-                className={style.swiperImage}
-              />
+              <div className={style.swiperImage}>
+                <ExportedImage
+                  src={slide1}
+                  alt="Foto da médica"
+                  aria-hidden="true"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  fill
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src="/about/renata-swiper2.jpg"
-                alt="Foto da médica"
-                className={style.swiperImage}
-              />
+              <div className={style.swiperImage}>
+                <ExportedImage
+                  src={slide2}
+                  alt="Foto da médica"
+                  aria-hidden="true"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  fill
+                />
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src="/about/renata-swiper3.jpg"
-                alt="Foto da médica"
-                className={style.swiperImage}
-              />
+              <div className={style.swiperImage}>
+                <ExportedImage
+                  src={slide3}
+                  alt="Foto da médica"
+                  aria-hidden="true"
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  fill
+                />
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>
