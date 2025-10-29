@@ -13,16 +13,16 @@ export function Contact() {
         <p>Se você tiver alguma dúvida precisar de mais informações ou quiser agendar uma consulta, sinta-se à vontade para entrar em contato!</p>
 
         <div className={style.contactIcons}>
-          <a href="tel+556999001982">
+          <a href="tel+5569984636500">
             <img
               src={phone.src}
               alt="Ícone de telefone"
               width={48}
               height={48}
             />
-            (69) 99900-1982
+            (69) 99846-3500
           </a>
-          <a href="https://wa.me/556999001982?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank">
+          <a href="https://wa.me/5569984636500?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank">
             <img
               src={whatsApp.src}
               alt="Ícone de WhatsApp"
@@ -31,7 +31,7 @@ export function Contact() {
             />
             Whatsapp
           </a>
-          <a href="https://instagram.com/reh_cortes" target="_blank">
+          <a href="https://instagram.com/wecare_saude_integrada" target="_blank">
             <img
               src={instagram.src}
               alt="Ícone de Instagram"

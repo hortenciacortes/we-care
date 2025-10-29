@@ -4,7 +4,7 @@ import Link from "next/link";
 import style from "./menu.module.scss";
 import { useState } from "react";
 import ExportedImage from "next-image-export-optimizer";
-import logo from "@assets/images/logo.png";
+import logo from "@assets/images/logo.svg";
 
 export function Menu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,9 +21,9 @@ export function Menu() {
         >
           <ExportedImage
             src={logo}
-            alt="Renata Côrtes Logo"
-            width={50}
-            height={45}
+            alt="We Care Logo"
+            width={120}
+            height={60}
             priority
           />
         </Link>
@@ -45,6 +45,7 @@ export function Menu() {
           className={menuOpen ? style.menuOpen : ""}
           onClick={closeMenu}
         >
+          <li><Link href="/">Início</Link></li>
           <li><Link href="#about">Sobre</Link></li>
           <li><Link href="#services">Serviços</Link></li>
           <li><Link href="#contact">Contato</Link></li>
