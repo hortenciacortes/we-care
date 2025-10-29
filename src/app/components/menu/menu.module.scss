@@ -1,7 +1,7 @@
 @use "@styles/mixins.scss" as *;
 
 .container {
-  background-color    : var(--hc-primary-300);
+  background-color    : var(--hc-background-light);
   width               : 100%;
   min-height          : 65px;
   z-index             : 4;
@@ -41,6 +41,10 @@
     list-style        : none;
     padding           : 0;
     margin            : 0;
+
+    a {
+      color: var(--hc-primary-500);
+    }
   }
 }
 

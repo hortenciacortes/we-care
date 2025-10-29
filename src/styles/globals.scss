@@ -27,7 +27,7 @@ p {
 }
 
 a {
-  @include typography(400, 16px, var(--hc-text-light), 21px);
+  @include typography(400, 16px, var(--hc-text-strong), 21px);
   cursor                    : pointer;
   text-decoration           : none;
   transition                : 300ms;
