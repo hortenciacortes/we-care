@@ -10,7 +10,11 @@
   grid-column         : 2;
   
   p {
-    color             : var(--hc-foreground-100);
+    color             : var(--hc-text-light);
   }
 
+  a {
+    color: var(--hc-foreground-50);
+    font-weight: 600;
+  }
 }
