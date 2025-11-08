@@ -2,7 +2,7 @@
 
 .container {
   padding             : 40px 0px;
-  background-color    : var(--hc-primary-300);
+  background-color    : var(--hc-primary-500);
 }
 
 .footer {
@@ -14,7 +14,7 @@
   }
 
   a {
-    color: var(--hc-foreground-50);
-    font-weight: 600;
+    color             : var(--hc-foreground-50);
+    font-weight       : 600;
   }
 }
