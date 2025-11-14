@@ -44,6 +44,30 @@
 
     a {
       color: var(--hc-primary-500);
+      font-weight: 600;
+
+      &::after {
+        content: "";
+        display: block;
+        bottom: -4px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: var(--hc-primary-500);
+        transition: width 0.3s ease;
+      }
+
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+      
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
     }
   }
 }

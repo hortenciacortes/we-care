@@ -5,8 +5,14 @@ import style from "./menu.module.scss";
 import { useState } from "react";
 import ExportedImage from "next-image-export-optimizer";
 import logo from "@assets/images/logo.svg";
+import { usePathname } from "next/navigation";
 
 export function Menu() {
+  /**
+   * Pathname hook to get the current path
+   */
+  const pathName = usePathname()?.replace(/[/]/g, '');
+
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(open => !open);
@@ -17,7 +23,7 @@ export function Menu() {
       <nav className={style.menu}>
         <Link
           href='/'
-          aria-label='Início'
+          aria-label='Inicio'
         >
           <ExportedImage
             src={logo}
@@ -45,10 +51,21 @@ export function Menu() {
           className={menuOpen ? style.menuOpen : ""}
           onClick={closeMenu}
         >
-          <li><Link href="/">Início</Link></li>
-          <li><Link href="#about">Sobre</Link></li>
-          <li><Link href="#services">Serviços</Link></li>
-          <li><Link href="#contact">Contato</Link></li>
+          <li>
+            <Link href="/" className={!pathName ? style.active : ''}>
+              Início 
+            </Link>
+          </li>
+          <li>
+            <Link href="#about" className={pathName === 'odontology' ? style.active : ''}>
+              Odontologia Digital
+            </Link>
+          </li>
+          <li>
+            <Link href="#services" className={pathName === 'medicine' ? style.active : ''}>
+              Medicina
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
