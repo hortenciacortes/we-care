@@ -34,10 +34,9 @@ export function About() {
 
         <div className={style.swiper}>
           <Swiper
-            modules={[Navigation, Autoplay, Pagination]}
+            modules={[Navigation, Autoplay]}
             loop
             navigation
-            pagination={{ clickable: true }}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             spaceBetween={50}
             slidesPerView={1}
