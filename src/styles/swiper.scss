@@ -1,0 +1,26 @@
+:root {
+  --swiper-pagination-bullet-width    : 12px;
+  --swiper-pagination-bullet-height   : 12px;
+  --swiper-pagination-color           : var(--hc-primary-400);
+  --swiper-navigation-color           : var(--hc-primary-400);
+  --swiper-navigation-sides-offset    : -60px;
+  --swiper-pagination-bottom          : -40px;
+}
+
+.swiper.swiper-initialized {
+  position                            : static;
+}
+
+@media(max-width: 768px) {
+  .swiper {
+    .swiper-button-prev, .swiper-button-next {
+      display                         : none;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .swiper-slide {
+    justify-items                     : center;
+  }
+}
