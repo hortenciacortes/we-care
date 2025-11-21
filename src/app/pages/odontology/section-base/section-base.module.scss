@@ -1,0 +1,27 @@
+@use '@/styles/mixins.scss' as *;
+
+.weCareAlign {
+  grid-column: 2;
+
+  h2 {
+    text-align: center;
+    color: var(--hc-primary-400);
+    margin: 24px 0px;
+  }
+
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    h4 {
+      color: var(--hc-secondary-500);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 50%;
+    border-radius: 8px;
+  }
+}
