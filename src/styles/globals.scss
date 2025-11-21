@@ -22,12 +22,16 @@ h3 {
   @include typography(600, 30px, var(--hc-text-strong), 1.4);
 }
 
+h4 {
+  @include typography(500, 24px, var(--hc-text-strong), 1.3);
+}
+
 p {
-  @include typography(400, 16px, var(--hc-text-strong), 21px);
+  @include typography(400, 16px, var(--hc-text-strong), 1.5);
 }
 
 a {
-  @include typography(400, 16px, var(--hc-text-strong), 21px);
+  @include typography(400, 16px, var(--hc-text-strong));
   cursor                    : pointer;
   text-decoration           : none;
   transition                : 300ms;
