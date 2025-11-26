@@ -43,6 +43,7 @@ export function WeCareAlign() {
 
   return (
     <SectionBase
+      id="align"
       title="WeCare Align"
       image={{ src: align, alt: "Foto da médica", width: 1512, height: 850 }}
       cardsInfo={cardsInfo}

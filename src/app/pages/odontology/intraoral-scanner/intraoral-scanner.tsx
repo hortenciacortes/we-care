@@ -26,6 +26,7 @@ export function IntraoralScanner() {
 
   return (
     <SectionBase
+      id="scanner"
       title="Scanner Intraoral"
       image={{ src: image, alt: "Foto da médica", width: 1512, height: 850 }}
       cardsInfo={cardsInfo}

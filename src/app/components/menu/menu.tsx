@@ -56,10 +56,21 @@ export function Menu() {
               Início 
             </Link>
           </li>
-          <li>
-            <Link href="#about" className={pathName === 'odontology' ? style.active : ''}>
+          <li className={style.hasSubmenu}>
+            <Link href="/odontology" className={pathName === 'odontology' ? style.active : ''}>
               Odontologia Digital
             </Link>
+            <ul className={style.submenu}>
+              <li>
+                <Link href="/odontology/#align">WeCare Align</Link>
+              </li>
+              <li>
+                <Link href="/odontology/#scanner">Scanner Intraoral</Link>
+              </li>
+              <li>
+                <Link href="/odontology/#treatments">Outros Tratamentos</Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link href="#services" className={pathName === 'medicine' ? style.active : ''}>

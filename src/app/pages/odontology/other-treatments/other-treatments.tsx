@@ -67,6 +67,7 @@ export function OtherTreatments() {
 
   return (
     <SectionBase
+      id="treatments"
       title="Scanner Intraoral"
       image={{ src: image, alt: "Foto da médica", width: 1512, height: 850 }}
       cardsInfo={cardsInfo}

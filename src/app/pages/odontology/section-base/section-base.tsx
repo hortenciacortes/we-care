@@ -3,6 +3,7 @@ import style from "./section-base.module.scss";
 import { StaticImageData } from "next/image";
 
 type SectionBaseProps = {
+  id: string;
   title: string;
   image: {
     src: StaticImageData;
@@ -13,9 +14,9 @@ type SectionBaseProps = {
   cardsInfo: any[];
 };
 
-export function SectionBase({ title, image, cardsInfo }: SectionBaseProps) {
+export function SectionBase({ id, title, image, cardsInfo }: SectionBaseProps) {
   return (
-    <section id="teste" className="grid-pattern">
+    <section id={id} className="grid-pattern">
       <div className={style.weCareAlign}>
         <div className={style.imageContainer}>
           <ExportedImage

@@ -7,6 +7,7 @@
   z-index             : 4;
   position            : fixed;
   top                 : 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .menu {
@@ -72,6 +73,56 @@
   }
 }
 
+.hasSubmenu {
+  position: relative;
+  padding: 12px;
+
+  /* ------- DESKTOP (hover) ------- */
+  .submenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: -18px;
+    margin-top: 10px;
+    border-top: 1px solid var(--hc-primary-300);
+    background: white;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 220px;
+
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: all 0.25s ease;
+
+    li a {
+      display: block;
+      padding: 10px 16px;
+      color: var(--hc-primary-500);
+      font-weight: 500;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 20px;
+      width: 12px;
+      height: 12px;
+      background: var(--hc-primary-300);
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover .submenu {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .menu {
     .iconMenu {
@@ -102,4 +153,32 @@
       display         : grid;
     }
   }
+
+  .hasSubmenu {
+    width: 100%;
+
+    .menuButton {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-bottom: 1px solid var(--hc-primary-500);
+    }
+
+    .submenu {
+      display: none;
+      background: var(--hc-primary-200);
+
+      li a {
+        padding: 12px;
+        display: block;
+        border-bottom: 1px solid var(--hc-primary-500);
+      }
+    }
+
+  /* abre submenu no mobile quando o menu principal está aberto */
+  &.submenuOpen .submenu {
+    display: block;
+  }
+}
+
 }
