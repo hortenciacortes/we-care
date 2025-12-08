@@ -1,11 +1,12 @@
 @use "@styles/mixins.scss" as *;
 
-:root {
-  --swiper-navigation-sides-offset    : -80px;
-  --swiper-navigation-size            : 24px !important;
-}
 
 .container {
+  :root {
+    --swiper-navigation-sides-offset    : -80px;
+    --swiper-navigation-size            : 24px !important;
+  }
+  
   background                          : var(--hc-primary-500);
   background-size                     : contain;
   min-height                          : 100vh;
