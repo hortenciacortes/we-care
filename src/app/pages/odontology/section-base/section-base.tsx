@@ -11,7 +11,7 @@ type SectionBaseProps = {
     width: number;
     height: number;
   };
-  cardsInfo: any[];
+  cardsInfo: { title: string; text: string }[];
 };
 
 export function SectionBase({ id, title, image, cardsInfo }: SectionBaseProps) {

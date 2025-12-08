@@ -2,7 +2,6 @@ import style from "./other-treatments.module.scss";
 
 import align from "@assets/images/odontology/align.jpg";
 import scanner from "@assets/images/odontology/intraoral-scanner.jpg";
-import treatments from "@assets/images/odontology/treatments.jpg";
 import whitening from "@assets/images/odontology/whitening.jpg";
 import facetas from "@assets/images/odontology/facetas.jpg";
 import protese from "@assets/images/odontology/protese.jpg";

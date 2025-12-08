@@ -4,6 +4,7 @@ import instagram from '@assets/images/contact/instagram-icon.svg';
 import phone from '@assets/images/contact/phone-icon.svg';
 import map from '@assets/images/contact/map-icon.svg';
 import clock from '@assets/images/contact/clock-icon.svg';
+import ExportedImage from 'next-image-export-optimizer';
 
 export function Contact() {
   return (
@@ -14,7 +15,7 @@ export function Contact() {
 
         <div className={style.contactIcons}>
           <a href="tel+5569984636500">
-            <img
+            <ExportedImage
               src={phone.src}
               alt="Ícone de telefone"
               width={48}
@@ -23,7 +24,7 @@ export function Contact() {
             (69) 99846-3500
           </a>
           <a href="https://wa.me/5569984636500?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta" target="_blank">
-            <img
+            <ExportedImage
               src={whatsApp.src}
               alt="Ícone de WhatsApp"
               width={48}
@@ -32,7 +33,7 @@ export function Contact() {
             Whatsapp
           </a>
           <a href="https://instagram.com/wecare_saude_integrada" target="_blank">
-            <img
+            <ExportedImage
               src={instagram.src}
               alt="Ícone de Instagram"
               width={48}
@@ -44,7 +45,7 @@ export function Contact() {
 
         <div className={style.contactAddress}>
           <p>
-            <img
+            <ExportedImage
               src={map.src}
               alt="Ícone de mapa"
               width={24}
@@ -53,7 +54,7 @@ export function Contact() {
             Endereço: Av. Pinheiro Machado, 1394 - São Cristóvão, Porto Velho - RO, 76801-112
           </p>
           <p>
-            <img
+            <ExportedImage
               src={clock.src}
               alt="Ícone de horário"
               width={24}
