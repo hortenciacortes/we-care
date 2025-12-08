@@ -1,0 +1,65 @@
+@use '@styles/mixins' as *;
+
+.container {
+  background                          : var(--hc-background-medium);
+}
+
+.otherTreatments {
+  @include flex(center, center, true);
+  gap               : 40px;
+  grid-column       : 2;
+
+  .cardCategory {
+    @include flex(center, center, true);
+    flex-direction  : column;
+    gap             : 20px;
+    width           : 100%;
+    text-align      : left;
+
+    .cardsItems {
+      @include flex(center, center);
+      gap             : 20px;
+      width           : 100%;
+      flex-wrap       : wrap;
+    }
+
+    .cardItem {
+      @include flex(flex-start, center, true);
+      gap: 24px;
+      background-color: var(--hc-background-light);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 280px;
+      height: 500px;
+      // padding:   24px;
+
+      .info {
+        @include flex(space-between, center, true);
+        gap: 12px;
+        padding: 0px 12px 24px;
+        height: 100%;
+        h4 {
+          text-align: center;
+          align-content: center;
+          min-height: 65px;
+        }
+  
+        p {
+          text-align: center;
+        }
+      }
+
+      .image {
+        position                          : relative;
+        width                             : 100%;
+        aspect-ratio                      : 3 / 2;
+        border-radius                     : 0px 0px 8px 8px;
+        
+        img {
+          object-fit                      : cover;
+          border-radius                   : 8px 0px 0px 8px;
+          box-shadow                      : 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}

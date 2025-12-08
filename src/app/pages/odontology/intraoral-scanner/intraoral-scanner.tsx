@@ -1,35 +1,49 @@
-import image from "@assets/images/odontology/intraoral-scanner.jpg";
-import { SectionBase } from "../section-base/section-base";
+import style from "./intraoral-scanner.module.scss";
+import ExportedImage from 'next-image-export-optimizer';
+
+import scanner from "@assets/images/odontology/intraoral-scanner.jpg";
+
+import InventoryOutlinedIcon from '@mui/icons-material/InventoryOutlined';
+import AirlineSeatReclineExtraOutlinedIcon from '@mui/icons-material/AirlineSeatReclineExtraOutlined';
 
 export function IntraoralScanner() {
-  const cardsInfo = [
-    {
-      title: "Diga adeus às moldagens antigas",
-      text: `Quem já precisou fazer uma moldagem tradicional sabe o quanto pode ser incômodo: aquela massa na boca, a sensação de engasgo e a demora do processo.
-      Na WeCare, você não passa mais por isso.
-      Com o nosso scanner intraoral de última geração, em poucos minutos criamos uma imagem 3D perfeita da sua boca, sem desconforto e com precisão máxima.`
-    },
-    {
-      title: "Benefícios para você",
-      text: `Mais conforto: sem massas, sem engasgos, sem traumas.
-      Mais rapidez: escaneamento feito em minutos.
-      Mais segurança: imagens em alta definição, com riqueza de detalhes.
-      Mais confiança: você acompanha junto conosco o seu sorriso em 3D.`
-    },
-    {
-      title: "O diferencial da WeCare",
-      text: `Na WeCare, acreditamos que tecnologia só faz sentido quando melhora a experiência do paciente.
-      Por isso, além de termos o scanner intraoral mais moderno, nossa equipe é treinada para transformar cada consulta em uma experiência positiva, segura e agradável.
-      Aqui, você não é apenas atendido(a) ? você participa ativamente do seu tratamento, entendendo cada etapa e visualizando o resultado antes mesmo de começar.`
-    },  
-  ];
-
   return (
-    <SectionBase
-      id="scanner"
-      title="Scanner Intraoral"
-      image={{ src: image, alt: "Foto da médica", width: 1512, height: 850 }}
-      cardsInfo={cardsInfo}
-    />
+    <section id='scanner' className={`${style.container} grid-pattern`}>
+      <div className={style.about}>
+        <div className={style.text}>
+          <h2>Scanner Intraoral</h2>
+          <p>
+            Na WeCare, acreditamos que cada paciente merece um tratamento exclusivo, moderno e rápido. Por isso, além de oferecermos a tecnologia mais avançada em odontologia digital, nós desenvolvemos nossa própria linha de alinhadores ortodônticos: o WeCare Align.
+          </p>
+
+          <div className={style.detach}>
+            <div>
+              <h4>
+                <AirlineSeatReclineExtraOutlinedIcon />
+                Conforto
+              </h4>
+              <p>Cuidamos do seu sorriso com tecnologia de ponta e atendimento humanizado.</p>
+            </div>
+            <div>
+              <h4>
+                <InventoryOutlinedIcon />
+                Tratamento
+              </h4>
+              <p>Planos de tratamento personalizados para suas necessidades.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className={style.image}>
+          <ExportedImage
+            src={scanner}
+            alt="Foto da médica"
+            aria-hidden="true"
+            sizes="(max-width: 768px) 100vw, 600px"
+            fill
+          />
+        </div>
+      </div>
+    </section>
   );
 }
