@@ -1,0 +1,68 @@
+@use "@styles/mixins.scss" as *;
+
+.container {
+  background                          : var(--hc-background-medium);
+  // background-size                     : contain;
+  min-height                          : 100vh;
+  padding: 65px 0px 0px;
+  // align-items: center;
+}
+
+  .bannerContent {
+    grid-column: 2 / 4;
+    @include flex(center, space-between, false, 20px);
+
+    .containInfo {
+      @include flex(center, start, true, 40px);
+      width                             : 55%;
+    }
+
+    h1 {
+      color: var(--hc-primary-500);
+    }
+    
+    p {
+      font-weight: 600;
+      // color                             : var(--hc-text-light);
+    }
+
+    .detach {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      svg {
+        color: var(--hc-primary-500);
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 8px;
+      }
+      
+      h4 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+  }
+
+
+
+  .swiperImage {
+    position                          : relative;
+    width                             : 100%;
+    aspect-ratio                      : 2 / 3;
+    max-width                         : 45%;
+    border-radius                     : 8px;
+    
+    img {
+      object-fit                      : cover;
+      border-radius                   : 8px 0px 0px 8px;
+      box-shadow                      : 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }

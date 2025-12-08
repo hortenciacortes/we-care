@@ -73,7 +73,7 @@ export function Menu() {
             </ul>
           </li>
           <li>
-            <Link href="#services" className={pathName === 'medicine' ? style.active : ''}>
+            <Link href="/medicine" className={pathName === 'medicine' ? style.active : ''}>
               Medicina
             </Link>
           </li>
